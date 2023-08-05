@@ -122,3 +122,25 @@ body[data-theme='dark'] .input-field input {
 body[data-theme='dark'] .input-field button {
     background-color: #7caf7c;
 }
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  .container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .theme-toggle {
+    font-size: 1.2em;
+    padding: 12px 24px;
+  }
+
+  #complete {
+    max-width: 90%;
+  }
+}

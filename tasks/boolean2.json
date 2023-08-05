@@ -1,122 +1,125 @@
-[
-    {
-        "description": "Write a statement that is true if both variables A and B are true",
-        "variables": [
-            "A",
-            "B"
-        ],
-        "solutions": [
-            "A && B",
-            "A == true && B == true"
-        ],
-        "info": "The logical AND operator (&&) returns true if both operands are true."
-    },
-    {
-        "description": "Write a statement that is false if either variable C or D is false",
-        "variables": [
-            "C",
-            "D"
-        ],
-        "solutions": [
-            "C && D",
-            "C == true && D == true"
-        ],
-        "info": "The logical AND operator (&&) returns false if either operand is false."
-    },
-    {
-        "description": "Write a statement that is true if variable E is true and variable F is false",
-        "variables": [
-            "E",
-            "F"
-        ],
-        "solutions": [
-            "E && !F",
-            "E == true && F == false"
-        ],
-        "info": "The logical NOT operator (!) inverts the value of a variable."
-    },
-    {
-        "description": "Write a statement that is false if variable G is false and variable H is true",
-        "variables": [
-            "G",
-            "H"
-        ],
-        "solutions": [
-            "!G && H",
-            "G == false && H == true"
-        ],
-        "info": "The logical NOT operator (!) inverts the value of a variable."
-    },
-    {
-        "description": "Write a statement that is true if variable I is false and variable J is false",
-        "variables": [
-            "I",
-            "J"
-        ],
-        "solutions": [
-            "!I && !J",
-            "I == false && J == false"
-        ],
-        "info": "The logical NOT operator (!) inverts the value of a variable."
-    },
-    {
-        "description": "Write a statement that is true if variable K is true and variable L is not false",
-        "variables": [
-            "K",
-            "L"
-        ],
-        "solutions": [
-            "K && L",
-            "K == true && L == true"
-        ],
-        "info": "The logical AND operator (&&) returns true if both operands are true."
-    },
-    {
-        "description": "Write a statement that is false if variable M is not true and variable N is not false",
-        "variables": [
-            "M",
-            "N"
-        ],
-        "solutions": [
-            "!M && N",
-            "M == false && N == true"
-        ],
-        "info": "The logical AND operator (&&) returns false if either operand is false."
-    },
-    {
-        "description": "Write a statement that is true if variable O is not false and variable P is not true",
-        "variables": [
-            "O",
-            "P"
-        ],
-        "solutions": [
-            "O && !P",
-            "O == true && P == false"
-        ],
-        "info": "The logical NOT operator (!) inverts the value of a variable."
-    },
-    {
-        "description": "Write a statement that is false if variable Q is not false and variable R is true",
-        "variables": [
-            "Q",
-            "R"
-        ],
-        "solutions": [
-            "Q && !R",
-            "Q == true && R == false"
-        ],
-        "info": "The logical AND operator (&&) returns false if either operand is false."
-    },
-    {
-        "description": "Write a statement that is true if variable S is not true and variable T is not true",
-        "variables": [
-            "S",
-            "T"
-        ],
-        "solutions": [
-            "!S && !T",
-            "S == false && T == false"
-        ],
-        "info": "The logical NOT operator (!) inverts the value of a variable."
-    }
-]
+{
+    "description": "This is a collection of basic boolean logic tasks with two variables. In moste cases you must build logical clauses with 'and' and 'or' to achive the correct outcome . <br/>Pay attention to the information you are given and write logic that conforms to the variables you are given and the end goal",
+    "tasks": [
+        {
+            "description": "Write a statement that is true if both variables A and B are true",
+            "variables": [
+                "A",
+                "B"
+            ],
+            "solutions": [
+                "A && B",
+                "A == true && B == true"
+            ],
+            "info": "The logical AND operator (&&) returns true if both operands are true."
+        },
+        {
+            "description": "Write a statement that is false if either variable C or D is false",
+            "variables": [
+                "C",
+                "D"
+            ],
+            "solutions": [
+                "C && D",
+                "C == true && D == true"
+            ],
+            "info": "The logical AND operator (&&) returns false if either operand is false."
+        },
+        {
+            "description": "Write a statement that is true if variable E is true and variable F is false",
+            "variables": [
+                "E",
+                "F"
+            ],
+            "solutions": [
+                "E && !F",
+                "E == true && F == false"
+            ],
+            "info": "The logical NOT operator (!) inverts the value of a variable."
+        },
+        {
+            "description": "Write a statement that is false if variable G is false and variable H is true",
+            "variables": [
+                "G",
+                "H"
+            ],
+            "solutions": [
+                "!G && H",
+                "G == false && H == true"
+            ],
+            "info": "The logical NOT operator (!) inverts the value of a variable."
+        },
+        {
+            "description": "Write a statement that is true if variable I is false and variable J is false",
+            "variables": [
+                "I",
+                "J"
+            ],
+            "solutions": [
+                "!I && !J",
+                "I == false && J == false"
+            ],
+            "info": "The logical NOT operator (!) inverts the value of a variable."
+        },
+        {
+            "description": "Write a statement that is true if variable K is true and variable L is not false",
+            "variables": [
+                "K",
+                "L"
+            ],
+            "solutions": [
+                "K && L",
+                "K == true && L == true"
+            ],
+            "info": "The logical AND operator (&&) returns true if both operands are true."
+        },
+        {
+            "description": "Write a statement that is false if variable M is not true and variable N is not false",
+            "variables": [
+                "M",
+                "N"
+            ],
+            "solutions": [
+                "!M && N",
+                "M == false && N == true"
+            ],
+            "info": "The logical AND operator (&&) returns false if either operand is false."
+        },
+        {
+            "description": "Write a statement that is true if variable O is not false and variable P is not true",
+            "variables": [
+                "O",
+                "P"
+            ],
+            "solutions": [
+                "O && !P",
+                "O == true && P == false"
+            ],
+            "info": "The logical NOT operator (!) inverts the value of a variable."
+        },
+        {
+            "description": "Write a statement that is false if variable Q is not false and variable R is true",
+            "variables": [
+                "Q",
+                "R"
+            ],
+            "solutions": [
+                "Q && !R",
+                "Q == true && R == false"
+            ],
+            "info": "The logical AND operator (&&) returns false if either operand is false."
+        },
+        {
+            "description": "Write a statement that is true if variable S is not true and variable T is not true",
+            "variables": [
+                "S",
+                "T"
+            ],
+            "solutions": [
+                "!S && !T",
+                "S == false && T == false"
+            ],
+            "info": "The logical NOT operator (!) inverts the value of a variable."
+        }
+    ]
+}
