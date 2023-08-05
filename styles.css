@@ -144,3 +144,19 @@ body[data-theme='dark'] .input-field button {
     max-width: 90%;
   }
 }
+
+/* Increase the size of buttons and inputs for better mobile UX */
+.input-field input,
+.input-field button {
+    font-size: 1em;
+    padding: 1em;
+}
+
+/* Apply these changes to smaller screens only */
+@media only screen and (max-width: 600px) {
+    .input-field input,
+    .input-field button {
+        font-size: 1.2em;
+        padding: 1.2em;
+    }
+}
