@@ -1,0 +1,132 @@
+[
+    {
+        "description": "Write a statement that is true if either variable A is true or both variables B and C are true",
+        "variables": [
+            "A",
+            "B",
+            "C"
+        ],
+        "solutions": [
+            "A || (B && C)",
+            "A == true || (B == true && C == true)"
+        ],
+        "info": "You can combine the logical AND (&&) and OR (||) operators to create more complex conditions."
+    },
+    {
+        "description": "Write a statement that is true if either both variables D and E are true, or variable F is false",
+        "variables": [
+            "D",
+            "E",
+            "F"
+        ],
+        "solutions": [
+            "(D && E) || !F",
+            "(D == true && E == true) || F == false"
+        ],
+        "info": "Parentheses can be used to group conditions and control the order of operations."
+    },
+    {
+        "description": "Write a statement that is true if both variable G is true and either variable H or I is true",
+        "variables": [
+            "G",
+            "H",
+            "I"
+        ],
+        "solutions": [
+            "G && (H || I)",
+            "G == true && (H == true || I == true)"
+        ],
+        "info": "You can nest conditions within each other for more complex logic."
+    },
+    {
+        "description": "Write a statement that is true if either variable J is false or both variables K and L are false",
+        "variables": [
+            "J",
+            "K",
+            "L"
+        ],
+        "solutions": [
+            "!J || (!K && !L)",
+            "J == false || (K == false && L == false)"
+        ],
+        "info": "You can combine the logical AND (&&) and OR (||) operators to create more complex conditions."
+    },
+    {
+        "description": "Write a statement that is true if either both variables M and N are false, or variable O is true",
+        "variables": [
+            "M",
+            "N",
+            "O"
+        ],
+        "solutions": [
+            "(!M && !N) || O",
+            "(M == false && N == false) || O == true"
+        ],
+        "info": "Parentheses can be used to group conditions and control the order of operations."
+    },
+    {
+        "description": "Write a statement that is true if both variable P is false and either variable Q or R is false",
+        "variables": [
+            "P",
+            "Q",
+            "R"
+        ],
+        "solutions": [
+            "!P && (!Q || !R)",
+            "P == false && (Q == false || R == false)"
+        ],
+        "info": "You can nest conditions within each other for more complex logic."
+    },
+    {
+        "description": "Write a statement that is true if either variable S is true or both variables T and U are not false",
+        "variables": [
+            "S",
+            "T",
+            "U"
+        ],
+        "solutions": [
+            "S || (T && U)",
+            "S == true || (T == true && U == true)"
+        ],
+        "info": "You can combine the logical AND (&&) and OR (||) operators to create more complex conditions."
+    },
+    {
+        "description": "Write a statement that is true if either both variables V and W are not false, or variable X is not true",
+        "variables": [
+            "V",
+            "W",
+            "X"
+        ],
+        "solutions": [
+            "(V && W) || !X",
+            "(V == true && W == true) || X == false"
+        ],
+        "info": "Parentheses can be used to group conditions and control the order of operations."
+    },
+    {
+        "description": "Write a statement that is true if both variable Y is not false and either variable Z or A1 is not false",
+        "variables": [
+            "Y",
+            "Z",
+            "A1"
+        ],
+        "solutions": [
+            "Y && (Z || A1)",
+            "Y == true && (Z == true || A1 == true)"
+        ],
+        "info": "You can nest conditions within each other for more complex logic."
+    },
+    {
+        "description": "Write a statement that is true if either variable B1 is not true or both variables C1 and D1 are not true",
+        "variables": [
+            "B1",
+            "C1",
+            "D1"
+        ],
+        "solutions": [
+            "!B1 || (!C1 && !D1)",
+            "B1 == false || (C1 == false && D1 == false)"
+        ],
+        "info": "You can combine the logical AND (&&) and OR (||) operators to create more complex conditions."
+    }
+]

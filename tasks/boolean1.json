@@ -1,0 +1,50 @@
+{
+    "description": "This is a collection of basic boolean logic tasks. Boolean means that somthing is either true or false. <br/>Pay attention to the information you are given and write logic that conforms to the variables you are given and the end goal",
+    "tasks": [
+        {
+            "description": "Write a statement that is true if variable A is true",
+            "variables": "A",
+            "solutions": [
+                "A",
+                "A==true"
+            ],
+            "info": "In boolean logic, a variable alone is considered true if its value is true. You can also use the equality operator to explicitly compare the variable with true."
+        },
+        {
+            "description": "Write a statement that is true if variable B is false",
+            "variables": "B",
+            "solutions": [
+                "!B",
+                "B==false"
+            ],
+            "info": "In boolean logic, the not operator (!) inverts the value of a variable. You can also use the equality operator to explicitly compare the variable with false."
+        },
+        {
+            "description": "Write a statement that is true if variable C is not true",
+            "variables": "C",
+            "solutions": [
+                "!C",
+                "C==false"
+            ],
+            "info": "In boolean logic, the not operator (!) can be used to check if a variable is not true. This is similar to checking if a variable is false."
+        },
+        {
+            "description": "Write a statement that is false if variable D is true",
+            "variables": "D",
+            "solutions": [
+                "!D",
+                "D==false"
+            ],
+            "info": "You can make a statement false when a variable is true by using the not operator (!) or by explicitly comparing the variable to false."
+        },
+        {
+            "description": "Write a statement that is false if variable E is false",
+            "variables": "E",
+            "solutions": [
+                "E",
+                "E==true"
+            ],
+            "info": "A statement will be false when a variable is false if you simply use the variable name. You can also make a statement false when a variable is false by explicitly comparing the variable to true."
+        }
+    ]
+}

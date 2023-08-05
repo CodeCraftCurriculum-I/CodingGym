@@ -1,0 +1,122 @@
+[
+    {
+        "description": "Write a statement that is true if either variable A or B is true",
+        "variables": [
+            "A",
+            "B"
+        ],
+        "solutions": [
+            "A || B",
+            "A == true || B == true"
+        ],
+        "info": "The logical OR operator (||) returns true if either operand is true."
+    },
+    {
+        "description": "Write a statement that is false if both variables C and D are false",
+        "variables": [
+            "C",
+            "D"
+        ],
+        "solutions": [
+            "C || D",
+            "C == true || D == true"
+        ],
+        "info": "The logical OR operator (||) returns false if both operands are false."
+    },
+    {
+        "description": "Write a statement that is true if either variable E is true or variable F is false",
+        "variables": [
+            "E",
+            "F"
+        ],
+        "solutions": [
+            "E || !F",
+            "E == true || F == false"
+        ],
+        "info": "The logical OR operator (||) returns true if either operand is true."
+    },
+    {
+        "description": "Write a statement that is false if both variable G is false and variable H is true",
+        "variables": [
+            "G",
+            "H"
+        ],
+        "solutions": [
+            "!G || H",
+            "G == false || H == true"
+        ],
+        "info": "The logical OR operator (||) returns true if either operand is true."
+    },
+    {
+        "description": "Write a statement that is true if either variable I is false or variable J is false",
+        "variables": [
+            "I",
+            "J"
+        ],
+        "solutions": [
+            "!I || !J",
+            "I == false || J == false"
+        ],
+        "info": "The logical OR operator (||) returns true if either operand is true."
+    },
+    {
+        "description": "Write a statement that is true if either variable K is true or variable L is not false",
+        "variables": [
+            "K",
+            "L"
+        ],
+        "solutions": [
+            "K || L",
+            "K == true || L == true"
+        ],
+        "info": "The logical OR operator (||) returns true if either operand is true."
+    },
+    {
+        "description": "Write a statement that is false if both variable M is not true and variable N is not false",
+        "variables": [
+            "M",
+            "N"
+        ],
+        "solutions": [
+            "!M || N",
+            "M == false || N == true"
+        ],
+        "info": "The logical OR operator (||) returns true if either operand is true."
+    },
+    {
+        "description": "Write a statement that is true if either variable O is not false or variable P is not true",
+        "variables": [
+            "O",
+            "P"
+        ],
+        "solutions": [
+            "O || !P",
+            "O == true || P == false"
+        ],
+        "info": "The logical OR operator (||) returns true if either operand is true."
+    },
+    {
+        "description": "Write a statement that is false if both variable Q is not false and variable R is true",
+        "variables": [
+            "Q",
+            "R"
+        ],
+        "solutions": [
+            "Q || !R",
+            "Q == true || R == false"
+        ],
+        "info": "The logical OR operator (||) returns true if either operand is true."
+    },
+    {
+        "description": "Write a statement that is true if either variable S is not true or variable T is not true",
+        "variables": [
+            "S",
+            "T"
+        ],
+        "solutions": [
+            "!S || !T",
+            "S == false || T == false"
+        ],
+        "info": "The logical OR operator (||) returns true if either operand is true."
+    }
+]

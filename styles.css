@@ -1,0 +1,124 @@
+.theme-toggle {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4caf50;
+    color: #ffffff;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+body[data-theme='dark'] .theme-toggle {
+    background-color: #7caf7c;
+}
+
+body[data-theme='light'] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    padding-top: 60px;
+}
+
+body[data-theme='dark'] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #121212;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    padding-top: 60px;
+}
+
+.container {
+    padding-top: 40px;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2em;
+    position: relative;
+}
+
+.card {
+    background-color: #ffffff;
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+body[data-theme='dark'] .card {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+#complete {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 80%;
+}
+
+#progress-card {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    padding: 1em;
+    background-color: #e0e0e0;
+
+}
+
+body[data-theme='dark'] .progress-bar-card {
+    background-color: #2a2a2a;
+}
+
+.progress-bar {
+    height: 20px;
+    background: #d0d0d0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-bar span {
+    display: block;
+    height: 100%;
+    width: 20%;
+    /* Update this to change the progress */
+    background: #4caf50;
+}
+
+.input-field {
+    margin-bottom: 1em;
+}
+
+.input-field input {
+    padding: 0.5em;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+body[data-theme='dark'] .input-field input {
+    background-color: #2a2a2a;
+    color: #ffffff;
+    border: 1px solid #4f4f4f;
+}
+
+.input-field button {
+    padding: 0.5em 1em;
+    background-color: #4caf50;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+body[data-theme='dark'] .input-field button {
+    background-color: #7caf7c;
+}

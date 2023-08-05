@@ -1,0 +1,119 @@
+[
+    {
+        "description": "A function for controlling a home automation system receives a boolean variable 'isNight' and a numeric variable 'temperature'. If it's night time and the temperature is below 20, the function should turn on the heating system. Write the logic statement that triggers the heating.",
+        "variables": [
+            "isNight",
+            "temperature"
+        ],
+        "solutions": [
+            "isNight && temperature < 20",
+            "isNight == true && temperature < 20"
+        ],
+        "info": "Logical AND (&&) is useful when all conditions must be satisfied."
+    },
+    {
+        "description": "A function for a smart fridge receives a numeric variable 'itemsLeft' and a boolean variable 'isHoliday'. If the number of items left is less than 10 or if it's a holiday, the function should trigger a grocery shopping. Write the logic statement that triggers the shopping.",
+        "variables": [
+            "itemsLeft",
+            "isHoliday"
+        ],
+        "solutions": [
+            "itemsLeft < 10 || isHoliday",
+            "itemsLeft < 10 || isHoliday == true"
+        ],
+        "info": "Logical OR (||) is useful when any condition can trigger the action."
+    },
+    {
+        "description": "A function for a self-checkout machine receives two numeric variables 'age' and 'itemCode'. If the age is less than 18 and the itemCode is 111 (indicating an age-restricted item), the function should deny the purchase. Write the logic statement that denies the purchase.",
+        "variables": [
+            "age",
+            "itemCode"
+        ],
+        "solutions": [
+            "age < 18 && itemCode == 111"
+        ],
+        "info": "You can combine conditions using logical AND (&&) to require multiple conditions to be satisfied."
+    },
+    {
+        "description": "A function for an elevator system receives a boolean variable 'isEmergency' and a numeric variable 'currentFloor'. If it's an emergency or the elevator is on the ground floor (floor 0), the function should open the doors. Write the logic statement that opens the doors.",
+        "variables": [
+            "isEmergency",
+            "currentFloor"
+        ],
+        "solutions": [
+            "isEmergency || currentFloor == 0",
+            "isEmergency == true || currentFloor == 0"
+        ],
+        "info": "You can combine conditions using logical OR (||) to make an action occur when any condition is satisfied."
+    },
+    {
+        "description": "A function for a car's cruise control system receives a boolean variable 'isCruiseEnabled' and a numeric variable 'speed'. If cruise control is enabled and the speed is above 50, the function should maintain the current speed. Write the logic statement that maintains the speed.",
+        "variables": [
+            "isCruiseEnabled",
+            "speed"
+        ],
+        "solutions": [
+            "isCruiseEnabled && speed > 50",
+            "isCruiseEnabled == true && speed > 50"
+        ],
+        "info": "Logical AND (&&) can be used when multiple conditions must be true."
+    },
+    {
+        "description": "A function for an electric vehicle's charging system receives two numeric variables 'batteryPercentage' and 'time'. If the battery percentage is less than 20 or the time is after 22:00 (represented as 2200), the function should start charging. Write the logic statement that starts the charging.",
+        "variables": [
+            "batteryPercentage",
+            "time"
+        ],
+        "solutions": [
+            "batteryPercentage < 20 || time >= 2200"
+        ],
+        "info": "Logical OR (||) can be used when any one of the conditions should trigger the action."
+    },
+    {
+        "description": "A function for a home security system receives a boolean variable 'isOwnerHome' and a numeric variable 'time'. If the owner is not home and the time is after 23:00 (represented as 2300), the system should activate. Write the logic statement that activates the system.",
+        "variables": [
+            "isOwnerHome",
+            "time"
+        ],
+        "solutions": [
+            "!isOwnerHome && time > 2300",
+            "isOwnerHome == false && time > 2300"
+        ],
+        "info": "Logical NOT (!) and AND (&&) can be combined to specify when an action should occur based on multiple conditions."
+    },
+    {
+        "description": "A function for an AI tutoring system receives a numeric variable 'correctAnswers' and a boolean variable 'isTest'. If the number of correct answers is less than 5 or it's a test, the system should provide additional study materials. Write the logic statement that triggers the provision of additional materials.",
+        "variables": [
+            "correctAnswers",
+            "isTest"
+        ],
+        "solutions": [
+            "correctAnswers < 5 || isTest",
+            "correctAnswers < 5 || isTest == true"
+        ],
+        "info": "Logical OR (||) can be used when any one of the conditions should trigger the action."
+    },
+    {
+        "description": "A function for a traffic control system receives two numeric variables 'vehicleSpeed' and 'trafficDensity'. If the vehicle's speed is above 80 or the traffic density is above 60, the system should warn the driver. Write the logic statement that triggers the warning.",
+        "variables": [
+            "vehicleSpeed",
+            "trafficDensity"
+        ],
+        "solutions": [
+            "vehicleSpeed > 80 || trafficDensity > 60"
+        ],
+        "info": "You can combine conditions using logical OR (||) to make an action occur when any condition is satisfied."
+    },
+    {
+        "description": "A function for a social media app's parental control system receives a boolean variable 'parentalControl' and a numeric variable 'userAge'. If parental control is enabled or the user age is less than 13, the system should restrict mature content. Write the logic statement that restricts the content.",
+        "variables": [
+            "parentalControl",
+            "userAge"
+        ],
+        "solutions": [
+            "parentalControl || userAge < 13",
+            "parentalControl == true || userAge < 13"
+        ],
+        "info": "Logical OR (||) is useful when any condition can trigger the action."
+    }
+]

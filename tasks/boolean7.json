@@ -1,0 +1,211 @@
+[
+    {
+        "description": "Write the logic statement that is true if variable 'I' in a loop from 1 to 10 is an odd number.",
+        "variables": [
+            "I"
+        ],
+        "solutions": [
+            "I % 2 != 0"
+        ],
+        "info": "Modulo operation can be used to check if a number is odd or even."
+    },
+    {
+        "description": "A function that detects anomalies in a data stream receives a boolean variable 'hasOutlier' and a numeric variable 'deviation'. If an outlier is detected or the deviation exceeds 3, an alert should be triggered. Write the logic statement that triggers the alert.",
+        "variables": [
+            "hasOutlier",
+            "deviation"
+        ],
+        "solutions": [
+            "hasOutlier || deviation > 3",
+            "hasOutlier == true || deviation > 3"
+        ],
+        "info": "Logical OR (||) is useful when any condition can trigger the action."
+    },
+    {
+        "description": "Write the logic statement that is true if variable 'I' in a loop from 1 to 100 is a multiple of 5.",
+        "variables": [
+            "I"
+        ],
+        "solutions": [
+            "I % 5 == 0"
+        ],
+        "info": "Modulo operation can be used to check if a number is a multiple of another."
+    },
+    {
+        "description": "A function for a spaceship's navigation system receives two boolean variables 'isAsteroidDetected' and 'isCourseClear'. If an asteroid is detected and the course is not clear, the spaceship should change its course. Write the logic statement that triggers the course change.",
+        "variables": [
+            "isAsteroidDetected",
+            "isCourseClear"
+        ],
+        "solutions": [
+            "isAsteroidDetected && !isCourseClear",
+            "isAsteroidDetected == true && isCourseClear == false"
+        ],
+        "info": "Logical AND (&&) and NOT (!) can be combined to specify when an action should occur based on multiple conditions."
+    },
+    {
+        "description": "Write the logic statement that is true if variable 'I' in a loop from 1 to 50 is a perfect square.",
+        "variables": [
+            "I"
+        ],
+        "solutions": [
+            "Math.sqrt(I) % 1 == 0"
+        ],
+        "info": "Square root and modulo operation can be used to check if a number is a perfect square."
+    },
+    {
+        "description": "A function for a bank's fraud detection system receives a numeric variable 'transactionAmount' and a boolean variable 'isUserLocationKnown'. If the transaction amount exceeds 1000 or the user's location is not known, the system should flag the transaction. Write the logic statement that flags the transaction.",
+        "variables": [
+            "transactionAmount",
+            "isUserLocationKnown"
+        ],
+        "solutions": [
+            "transactionAmount > 1000 || !isUserLocationKnown",
+            "transactionAmount > 1000 || isUserLocationKnown == false"
+        ],
+        "info": "Logical OR (||) and NOT (!) can be combined to specify when an action should occur based on multiple conditions."
+    },
+    {
+        "description": "A function for a movie streaming platform receives a boolean variable 'isPremiumUser' and a numeric variable 'watchHours'. If the user is not a premium user and the watch hours exceed 10, access should be restricted. Write the logic statement that restricts the access.",
+        "variables": [
+            "isPremiumUser",
+            "watchHours"
+        ],
+        "solutions": [
+            "!isPremiumUser && watchHours > 10",
+            "isPremiumUser == false && watchHours > 10"
+        ],
+        "info": "Logical AND (&&) and NOT (!) can be combined to specify when an action should occur based on multiple conditions."
+    },
+    {
+        "description": "Write the logic statement that is true if variable 'I' in a loop from 1 to 1000 is divisible by 7.",
+        "variables": [
+            "I"
+        ],
+        "solutions": [
+            "I % 7 == 0"
+        ],
+        "info": "Modulo operation can be used to check if a number is divisible by another."
+    },
+    {
+        "description": "A function for a robot's movement control system receives two boolean variables 'isPathClear' and 'isBatteryFull'. If the path is not clear or the battery is not full, the robot should stop. Write the logic statement that stops the robot.",
+        "variables": [
+            "isPathClear",
+            "isBatteryFull"
+        ],
+        "solutions": [
+            "!isPathClear || !isBatteryFull",
+            "isPathClear == false || isBatteryFull == false"
+        ],
+        "info": "Logical OR (||) and NOT (!) can be combined to specify when an action should occur based on multiple conditions."
+    },
+    {
+        "description": "Write the logic statement that is true if variable 'I' in a loop from 1 to 500 is a multiple of 3 or 5.",
+        "variables": [
+            "I"
+        ],
+        "solutions": [
+            "I % 3 == 0 || I % 5 == 0"
+        ],
+        "info": "Modulo operation and logical OR (||) can be used to check if a number is a multiple of one of multiple numbers."
+    },
+    {
+        "description": "A function for a shopping website's recommendation system receives a numeric variable 'itemsInCart' and a boolean variable 'isWishlistEmpty'. If the number of items in cart is zero and the wishlist is empty, the system should recommend popular items. Write the logic statement that triggers the recommendation.",
+        "variables": [
+            "itemsInCart",
+            "isWishlistEmpty"
+        ],
+        "solutions": [
+            "itemsInCart == 0 && isWishlistEmpty",
+            "itemsInCart == 0 && isWishlistEmpty == true"
+        ],
+        "info": "Logical AND (&&) is useful when all conditions must be satisfied."
+    },
+    {
+        "description": "Write the logic statement that is true if variable 'I' in a loop from 1 to 20 is equal to 10.",
+        "variables": [
+            "I"
+        ],
+        "solutions": [
+            "I == 10"
+        ],
+        "info": "Equality operator (==) can be used to check if a variable equals a specific value."
+    },
+    {
+        "description": "A function for an IoT device's power management system receives a numeric variable 'batteryLevel' and a boolean variable 'isDeviceIdle'. If the battery level is below 20 or the device is idle, the system should enter power saving mode. Write the logic statement that triggers the power saving mode.",
+        "variables": [
+            "batteryLevel",
+            "isDeviceIdle"
+        ],
+        "solutions": [
+            "batteryLevel < 20 || isDeviceIdle",
+            "batteryLevel < 20 || isDeviceIdle == true"
+        ],
+        "info": "Logical OR (||) is useful when any condition can trigger the action."
+    },
+    {
+        "description": "Write the logic statement that is true if variable 'I' in a loop from 1 to 30 is greater than 25.",
+        "variables": [
+            "I"
+        ],
+        "solutions": [
+            "I > 25"
+        ],
+        "info": "Inequality operator (>) can be used to check if a variable is greater than a specific value."
+    },
+    {
+        "description": "A function for a game's matchmaking system receives two numeric variables 'playerSkillLevel' and 'opponentSkillLevel'. If the difference in skill level is more than 10, the system should find a new opponent. Write the logic statement that triggers the search for a new opponent.",
+        "variables": [
+            "playerSkillLevel",
+            "opponentSkillLevel"
+        ],
+        "solutions": [
+            "Math.abs(playerSkillLevel - opponentSkillLevel) > 10"
+        ],
+        "info": "Math.abs function can be used to calculate the absolute difference between two numbers."
+    },
+    {
+        "description": "Write the logic statement that is true if variable 'I' in a loop from 1 to 100 is less than or equal to 50.",
+        "variables": [
+            "I"
+        ],
+        "solutions": [
+            "I <= 50"
+        ],
+        "info": "Inequality operator (<=) can be used to check if a variable is less than or equal to a specific value."
+    },
+    {
+        "description": "A function for a train's automatic door system receives a boolean variable 'isTrainMoving' and a numeric variable 'doorOpenTime'. If the train is moving or the door has been open for more than 15 minutes, the system should close the door. Write the logic statement that triggers the door to close.",
+        "variables": [
+            "isTrainMoving",
+            "doorOpenTime"
+        ],
+        "solutions": [
+            "isTrainMoving || doorOpenTime > 15",
+            "isTrainMoving == true || doorOpenTime > 15"
+        ],
+        "info": "Logical OR (||) is useful when any condition can trigger the action."
+    },
+    {
+        "description": "Write the logic statement that is true if variable 'I' in a loop from 1 to 200 is neither a multiple of 2 nor a multiple of 3.",
+        "variables": [
+            "I"
+        ],
+        "solutions": [
+            "I % 2 != 0 && I % 3 != 0"
+        ],
+        "info": "Modulo operation and logical AND (&&) can be used to check if a number is not a multiple of any of the given numbers."
+    },
+    {
+        "description": "A function for a smart home system receives two boolean variables 'isNightTime' and 'isHomeOccupied'. If it is night time and the home is not occupied, the system should turn off all lights. Write the logic statement that triggers the lights to turn off.",
+        "variables": [
+            "isNightTime",
+            "isHomeOccupied"
+        ],
+        "solutions": [
+            "isNightTime && !isHomeOccupied",
+            "isNightTime == true && isHomeOccupied == false"
+        ],
+        "info": "Logical AND (&&) and NOT (!) can be combined to specify when an action should occur based on multiple conditions."
+    }
+]

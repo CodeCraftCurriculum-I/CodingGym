@@ -1,0 +1,145 @@
+{
+    "description": "In this task set you will be shown a pattern of 8x8, your task is to write the logic needed to produce that pattern. ",
+    "tasks": [
+        {
+            "description": "Write the logic statement that is true when the sum of the row (i) and column (j) indices is even, given the time tick (t) is equal to 0.",
+            "variables": [
+                "i",
+                "j",
+                "t"
+            ],
+            "solutions": [
+                "(i+j+t)%2 == 0",
+                "(i+j+t)%2 === 0"
+            ],
+            "display": "<svg width='200' height='200' xmlns='http://www.w3.org/2000/svg'><g stroke='lightgray' stroke-width='1'><path d='M0,25 H200 M0,50 H200 M0,75 H200 M0,100 H200 M0,125 H200 M0,150 H200 M0,175 H200 M0,200 H200 M25,0 V200 M50,0 V200 M75,0 V200 M100,0 V200 M125,0 V200 M150,0 V200 M175,0 V200 M200,0 V200' fill='none'/></g><g fill='lightgray'><circle cx='12.5' cy='12.5' r='5' /><circle cx='37.5' cy='37.5' r='5' /><circle cx='62.5' cy='62.5' r='5' /><circle cx='87.5' cy='87.5' r='5' /><circle cx='112.5' cy='112.5' r='5' /><circle cx='137.5' cy='137.5' r='5' /><circle cx='162.5' cy='162.5' r='5' /><circle cx='187.5' cy='187.5' r='5' /></g></svg>",
+            "info": "When indices i and j are both even or both odd, their sum is always even. This principle can be used to create patterns on a 2D grid."
+        },
+        {
+            "description": "Write the logic statement that is true when the row (i) index is equal to the column (j) index or the time tick (t) is equal to 1.",
+            "variables": [
+                "i",
+                "j",
+                "t"
+            ],
+            "solutions": [
+                "i == j || t == 1",
+                "i === j || t === 1"
+            ],
+            "display": "<svg width='200' height='200' xmlns='http://www.w3.org/2000/svg'><g stroke='lightgray' stroke-width='1'><path d='M0,25 H200 M0,50 H200 M0,75 H200 M0,100 H200 M0,125 H200 M0,150 H200 M0,175 H200 M0,200 H200 M25,0 V200 M50,0 V200 M75,0 V200 M100,0 V200 M125,0 V200 M150,0 V200 M175,0 V200 M200,0 V200' fill='none'/></g><g fill='lightgray'><circle cx='12.5' cy='12.5' r='5' /><circle cx='37.5' cy='37.5' r='5' /><circle cx='62.5' cy='62.5' r='5' /><circle cx='87.5' cy='87.5' r='5' /><circle cx='112.5' cy='112.5' r='5' /><circle cx='137.5' cy='137.5' r='5' /><circle cx='162.5' cy='162.5' r='5' /><circle cx='187.5' cy='187.5' r='5' /></g></svg>",
+            "info": "This task combines checking for equality between two indices with a conditional check for a specific value of a third variable. It creates patterns that depend on time or position on a grid."
+        },
+        {
+            "description": "Write the logic statement that is true when the row (i) index divided by the column (j) index is less than 1, given that the time tick (t) is equal to 0.",
+            "variables": [
+                "i",
+                "j",
+                "t"
+            ],
+            "solutions": [
+                "i/j < 1 && t == 0",
+                "i/j < 1 && t === 0"
+            ],
+            "display": "<svg width='200' height='200' xmlns='http://www.w3.org/2000/svg'><g stroke='lightgray' stroke-width='1'><path d='M0,25 H200 M0,50 H200 M0,75 H200 M0,100 H200 M0,125 H200 M0,150 H200 M0,175 H200 M0,200 H200 M25,0 V200 M50,0 V200 M75,0 V200 M100,0 V200 M125,0 V200 M150,0 V200 M175,0 V200 M200,0 V200' fill='none'/></g><g fill='lightgray'><circle cx='12.5' cy='12.5' r='5' /><circle cx='37.5' cy='37.5' r='5' /><circle cx='62.5' cy='62.5' r='5' /><circle cx='87.5' cy='87.5' r='5' /><circle cx='112.5' cy='112.5' r='5' /><circle cx='137.5' cy='137.5' r='5' /><circle cx='162.5' cy='162.5' r='5' /><circle cx='187.5' cy='187.5' r='5' /></g></svg>",
+            "info": "This task introduces division and comparison operators. The resulting pattern represents a half of the grid, separated diagonally."
+        },
+        {
+            "description": "Write the logic statement that is true when the column (j) index is less than or equal to the row (i) index, given that the time tick (t) is equal to 0.",
+            "variables": [
+                "i",
+                "j",
+                "t"
+            ],
+            "solutions": [
+                "j <= i && t == 0",
+                "j <= i && t === 0"
+            ],
+            "display": "<svg width='200' height='200' xmlns='http://www.w3.org/2000/svg'><g stroke='lightgray' stroke-width='1'><path d='M0,25 H200 M0,50 H200 M0,75 H200 M0,100 H200 M0,125 H200 M0,150 H200 M0,175 H200 M0,200 H200 M25,0 V200 M50,0 V200 M75,0 V200 M100,0 V200 M125,0 V200 M150,0 V200 M175,0 V200 M200,0 V200' fill='none'/></g><g fill='lightgray'><circle cx='12.5' cy='12.5' r='5' /><circle cx='37.5' cy='37.5' r='5' /><circle cx='62.5' cy='62.5' r='5' /><circle cx='87.5' cy='87.5' r='5' /><circle cx='112.5' cy='112.5' r='5' /><circle cx='137.5' cy='137.5' r='5' /><circle cx='162.5' cy='162.5' r='5' /><circle cx='187.5' cy='187.5' r='5' /></g></svg>",
+            "info": "This task uses comparison operators to create a triangle pattern on the grid."
+        },
+        {
+            "description": "Write the logic statement that is true when the sum of the row (i) and column (j) indices is greater than the time tick (t).",
+            "variables": [
+                "i",
+                "j",
+                "t"
+            ],
+            "solutions": [
+                "i+j > t",
+                "i+j > t"
+            ],
+            "display": "<svg width='200' height='200' xmlns='http://www.w3.org/2000/svg'><g stroke='lightgray' stroke-width='1'><path d='M0,25 H200 M0,50 H200 M0,75 H200 M0,100 H200 M0,125 H200 M0,150 H200 M0,175 H200 M0,200 H200 M25,0 V200 M50,0 V200 M75,0 V200 M100,0 V200 M125,0 V200 M150,0 V200 M175,0 V200 M200,0 V200' fill='none'/></g><g fill='lightgray'><circle cx='12.5' cy='12.5' r='5' /><circle cx='37.5' cy='37.5' r='5' /><circle cx='62.5' cy='62.5' r='5' /><circle cx='87.5' cy='87.5' r='5' /><circle cx='112.5' cy='112.5' r='5' /><circle cx='137.5' cy='137.5' r='5' /><circle cx='162.5' cy='162.5' r='5' /><circle cx='187.5' cy='187.5' r='5' /></g></svg>",
+            "info": "This task uses a comparison between a sum and a third variable. The resulting pattern can change dynamically with each time tick."
+        },
+        {
+            "description": "Write the logic statement that is true when the product of the row (i) and column (j) indices is even, given that the time tick (t) is equal to 0.",
+            "variables": [
+                "i",
+                "j",
+                "t"
+            ],
+            "solutions": [
+                "(i*j*t)%2 == 0",
+                "(i*j*t)%2 === 0"
+            ],
+            "display": "<svg width='200' height='200' xmlns='http://www.w3.org/2000/svg'><g stroke='lightgray' stroke-width='1'><path d='M0,25 H200 M0,50 H200 M0,75 H200 M0,100 H200 M0,125 H200 M0,150 H200 M0,175 H200 M0,200 H200 M25,0 V200 M50,0 V200 M75,0 V200 M100,0 V200 M125,0 V200 M150,0 V200 M175,0 V200 M200,0 V200' fill='none'/></g><g fill='lightgray'><circle cx='12.5' cy='12.5' r='5' /><circle cx='37.5' cy='37.5' r='5' /><circle cx='62.5' cy='62.5' r='5' /><circle cx='87.5' cy='87.5' r='5' /><circle cx='112.5' cy='112.5' r='5' /><circle cx='137.5' cy='137.5' r='5' /><circle cx='162.5' cy='162.5' r='5' /><circle cx='187.5' cy='187.5' r='5' /></g></svg>",
+            "info": "When the product of indices i and j is even, the cell is colored. This principle can be used to create patterns on a 2D grid."
+        },
+        {
+            "description": "Write the logic statement that is true when the difference of the row (i) and column (j) indices is less than or equal to the time tick (t).",
+            "variables": [
+                "i",
+                "j",
+                "t"
+            ],
+            "solutions": [
+                "Math.abs(i-j) <= t",
+                "Math.abs(i-j) <= t"
+            ],
+            "display": "<svg width='200' height='200' xmlns='http://www.w3.org/2000/svg'><g stroke='lightgray' stroke-width='1'><path d='M0,25 H200 M0,50 H200 M0,75 H200 M0,100 H200 M0,125 H200 M0,150 H200 M0,175 H200 M0,200 H200 M25,0 V200 M50,0 V200 M75,0 V200 M100,0 V200 M125,0 V200 M150,0 V200 M175,0 V200 M200,0 V200' fill='none'/></g><g fill='lightgray'><circle cx='12.5' cy='12.5' r='5' /><circle cx='37.5' cy='37.5' r='5' /><circle cx='62.5' cy='62.5' r='5' /><circle cx='87.5' cy='87.5' r='5' /><circle cx='112.5' cy='112.5' r='5' /><circle cx='137.5' cy='137.5' r='5' /><circle cx='162.5' cy='162.5' r='5' /><circle cx='187.5' cy='187.5' r='5' /></g></svg>",
+            "info": "This task involves absolute value function and comparison operators to create a dynamic pattern that changes with each time tick."
+        },
+        {
+            "description": "Write the logic statement that is true when the sum of the row (i) and column (j) indices and time tick (t) is a multiple of 3.",
+            "variables": [
+                "i",
+                "j",
+                "t"
+            ],
+            "solutions": [
+                "(i+j+t)%3 == 0",
+                "(i+j+t)%3 === 0"
+            ],
+            "display": "<svg width='200' height='200' xmlns='http://www.w3.org/2000/svg'><g stroke='lightgray' stroke-width='1'><path d='M0,25 H200 M0,50 H200 M0,75 H200 M0,100 H200 M0,125 H200 M0,150 H200 M0,175 H200 M0,200 H200 M25,0 V200 M50,0 V200 M75,0 V200 M100,0 V200 M125,0 V200 M150,0 V200 M175,0 V200 M200,0 V200' fill='none'/></g><g fill='lightgray'><circle cx='12.5' cy='12.5' r='5' /><circle cx='37.5' cy='37.5' r='5' /><circle cx='62.5' cy='62.5' r='5' /><circle cx='87.5' cy='87.5' r='5' /><circle cx='112.5' cy='112.5' r='5' /><circle cx='137.5' cy='137.5' r='5' /><circle cx='162.5' cy='162.5' r='5' /><circle cx='187.5' cy='187.5' r='5' /></g></svg>",
+            "info": "This task uses modulo operation to create a pattern. The resulting pattern can change dynamically with each time tick."
+        },
+        {
+            "description": "Write the logic statement that is true when the row (i) index is equal to the time tick (t) or the column (j) index is equal to the time tick (t).",
+            "variables": [
+                "i",
+                "j",
+                "t"
+            ],
+            "solutions": [
+                "i == t || j == t",
+                "i === t || j === t"
+            ],
+            "display": "<svg width='200' height='200' xmlns='http://www.w3.org/2000/svg'><g stroke='lightgray' stroke-width='1'><path d='M0,25 H200 M0,50 H200 M0,75 H200 M0,100 H200 M0,125 H200 M0,150 H200 M0,175 H200 M0,200 H200 M25,0 V200 M50,0 V200 M75,0 V200 M100,0 V200 M125,0 V200 M150,0 V200 M175,0 V200 M200,0 V200' fill='none'/></g><g fill='lightgray'><circle cx='12.5' cy='12.5' r='5' /><circle cx='37.5' cy='37.5' r='5' /><circle cx='62.5' cy='62.5' r='5' /><circle cx='87.5' cy='87.5' r='5' /><circle cx='112.5' cy='112.5' r='5' /><circle cx='137.5' cy='137.5' r='5' /><circle cx='162.5' cy='162.5' r='5' /><circle cx='187.5' cy='187.5' r='5' /></g></svg>",
+            "info": "This task involves equality operators and logical OR to create a dynamic pattern that changes with each time tick."
+        },
+        {
+            "description": "Write the logic statement that is true when the sum of the row (i) and column (j) indices and time tick (t) is odd.",
+            "variables": [
+                "i",
+                "j",
+                "t"
+            ],
+            "solutions": [
+                "(i+j+t)%2 != 0",
+                "(i+j+t)%2 !== 0"
+            ],
+            "display": "<svg width='200' height='200' xmlns='http://www.w3.org/2000/svg'><g stroke='lightgray' stroke-width='1'><path d='M0,25 H200 M0,50 H200 M0,75 H200 M0,100 H200 M0,125 H200 M0,150 H200 M0,175 H200 M0,200 H200 M25,0 V200 M50,0 V200 M75,0 V200 M100,0 V200 M125,0 V200 M150,0 V200 M175,0 V200 M200,0 V200' fill='none'/></g><g fill='lightgray'><circle cx='12.5' cy='12.5' r='5' /><circle cx='37.5' cy='37.5' r='5' /><circle cx='62.5' cy='62.5' r='5' /><circle cx='87.5' cy='87.5' r='5' /><circle cx='112.5' cy='112.5' r='5' /><circle cx='137.5' cy='137.5' r='5' /><circle cx='162.5' cy='162.5' r='5' /><circle cx='187.5' cy='187.5' r='5' /></g></svg>",
+            "info": "This task involves a sum, modulo operation and comparison operator to create a dynamic pattern that changes with each time tick."
+        }
+    ]
+}

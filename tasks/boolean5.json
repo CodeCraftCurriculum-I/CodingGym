@@ -1,0 +1,110 @@
+[
+    {
+        "description": "In a for loop where I ranges from 1 to 10, write a statement that is true if I is an even number",
+        "variables": [
+            "I"
+        ],
+        "solutions": [
+            "I % 2 == 0"
+        ],
+        "info": "Modulo operator (%) can be used to check if a number is even or odd."
+    },
+    {
+        "description": "In a for loop where I ranges from 1 to 100, write a statement that is true if I is divisible by 5",
+        "variables": [
+            "I"
+        ],
+        "solutions": [
+            "I % 5 == 0"
+        ],
+        "info": "Modulo operator (%) returns the remainder after division, and can be used to check if a number is divisible by another."
+    },
+    {
+        "description": "In a for loop where I ranges from 1 to 50, and given a boolean variable A that is true, write a statement that is true if I is less than 25 or A is true",
+        "variables": [
+            "I",
+            "A"
+        ],
+        "solutions": [
+            "I < 25 || A",
+            "I < 25 || A == true"
+        ],
+        "info": "Logical OR operator (||) can be used to check if at least one of the conditions is true."
+    },
+    {
+        "description": "In a for loop where I ranges from 1 to 20, write a statement that is true if I is equal to 10",
+        "variables": [
+            "I"
+        ],
+        "solutions": [
+            "I == 10"
+        ],
+        "info": "Equality operator (==) can be used to check if two values are equal."
+    },
+    {
+        "description": "In a for loop where I ranges from 0 to 10, and given a boolean variable B that is false, write a statement that is true if I is not equal to 5 or B is false",
+        "variables": [
+            "I",
+            "B"
+        ],
+        "solutions": [
+            "I != 5 || !B",
+            "I != 5 || B == false"
+        ],
+        "info": "Inequality operator (!=) and logical NOT operator (!) can be used in conjunction with logical OR operator (||) to create complex conditions."
+    },
+    {
+        "description": "In a for loop where I ranges from 1 to 10, write a statement that is true if I is a prime number",
+        "variables": [
+            "I"
+        ],
+        "solutions": [
+            "I == 2 || I == 3 || I == 5 || I == 7"
+        ],
+        "info": "Logical OR operator (||) can be used to check if any of the conditions is true."
+    },
+    {
+        "description": "In a for loop where I ranges from 1 to 10, and given a boolean variable C that is true, write a statement that is true if I is greater than 5 and C is true",
+        "variables": [
+            "I",
+            "C"
+        ],
+        "solutions": [
+            "I > 5 && C",
+            "I > 5 && C == true"
+        ],
+        "info": "Logical AND operator (&&) can be used to check if all conditions are true."
+    },
+    {
+        "description": "In a for loop where I ranges from 0 to 100, write a statement that is true if I is divisible by 10",
+        "variables": [
+            "I"
+        ],
+        "solutions": [
+            "I % 10 == 0"
+        ],
+        "info": "Modulo operator (%) can be used to check if a number is divisible by another."
+    },
+    {
+        "description": "In a for loop where I ranges from 0 to 20, and given a boolean variable D that is false, write a statement that is true if I is less than 10 or D is false",
+        "variables": [
+            "I",
+            "D"
+        ],
+        "solutions": [
+            "I < 10 || !D",
+            "I < 10 || D == false"
+        ],
+        "info": "Logical OR operator (||) and logical NOT operator (!) can be used to check if at least one of the conditions is true."
+    },
+    {
+        "description": "In a for loop where I ranges from 1 to 50, write a statement that is true if I is a multiple of 7",
+        "variables": [
+            "I"
+        ],
+        "solutions": [
+            "I % 7 == 0"
+        ],
+        "info": "Modulo operator (%) can be used to check if a number is a multiple of another."
+    }
+]

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body data-theme="light">
+
+    <div class="card" id="progress-card">
+        <div class="progress-bar">
+            <span></span>
+        </div>
+    </div>
+    <button id="theme-toggle" class="theme-toggle">Dark</button>
+
+    <div class="container">
+
+        <div class="card" id="intro">
+            <h2>Intro</h2>
+            <p>intro content goes here.</p>
+            <div class="input-field">
+                <input id="userID" type="text" placeholder="Enter your student email address here">
+                <p id="warning-message"></p>
+                <br /><br />
+                <button type="submit">Start</button>
+            </div>
+        </div>
+
+        <div class="card" id="task">
+            <h2>Description</h2>
+            <p>description content goes here.</p>
+            <code></code>
+            <br /><br />
+            <div class="input-field">
+                <input id="answer" type="text" placeholder="Enter your solution here">
+                <br /><br />
+                <button type="submit" id="answerbt">Submit</button>
+            </div>
+        </div>
+
+        <div class="card" id="explanation">
+            <h2>Explanation</h2>
+            <p>explanation content goes here.</p>
+            <code></code>
+            <br><br>
+            <button type="submit" id="continuebt">Continue</button>
+        </div>
+
+        <div class="card" id="complete">
+            <h2>Complete</h2>
+            <p>Your complete content goes here.</p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
