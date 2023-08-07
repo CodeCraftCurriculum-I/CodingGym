@@ -2,6 +2,15 @@
 <html>
 
 <head>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7G64QBV79N"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-7G64QBV79N');
+    </script>
+
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
@@ -24,7 +33,7 @@
                 <input id="userID" type="text" placeholder="Enter your student email address here">
                 <p id="warning-message"></p>
                 <br /><br />
-                <button type="submit">Start</button>
+                <button type="button">Start</button>
             </div>
         </div>
 
@@ -35,8 +44,9 @@
             <br /><br />
             <div class="input-field">
                 <input id="answer" type="text" placeholder="Enter your solution here">
+                <p id="error-message" class="error" role="alert"></p>
                 <br /><br />
-                <button type="submit" id="answerbt">Submit</button>
+                <button type="button" id="answerbt">Submit</button>
             </div>
         </div>
 

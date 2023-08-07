@@ -73,6 +73,26 @@ function displayCards(cardIds) {
     });
 }
 
+function evaluateTests(userAnswer, tests, errors = []) {
+    console.log(userAnswer);
+    return {
+        result: tests.every(test => {
+            try {
+                console.log(test);
+                let func = new Function('answer', test);
+                func(userAnswer);
+                return true;
+            } catch (error) {
+                errors.push(error);
+                return false;
+            }
+        }),
+        errors
+    };
+}
+
+
+
 function crc32(object) {
     let jsonString = JSON.stringify(object);
     let crcValue = 0 ^ (-1);
@@ -107,13 +127,31 @@ function showTask(task) {
     document.getElementById("answer").value = "";
 
     let description = document.querySelector('#task > p');
-    description.innerHTML = task.description;
+    description.innerHTML = format(task.description);
     _[`p${progress}`] = 0
     _[`t${progress}`] = Date.now();
     _["crc"] = crc32(_);
     let code = document.querySelector('#task > code');
     code.innerHTML = `(${task.variables}) => your code`
 
+}
+
+function key(str, n) {
+    str = `${str}$:${str.length}`;
+    let r = "";
+    for (let i = 0; i < str.length; i++) {
+        if (i % n === 0 && i !== 0) {
+            r += "\n";
+        }
+        r += str[i];
+    }
+    let ll = r.split("\n").at(-1).length % n;
+    if (ll !== 0) {
+        for (let i = 0; i < n - ll - 1; i++) {
+            r += String.fromCharCode(Math.random() * 25 + 97);
+        }
+    }
+    return r;
 }
 
 function validateUserID() {
@@ -137,6 +175,11 @@ function validateUserID() {
     return valid;
 }
 
+function format(input) {
+    return input.replaceAll("true", "<span class='true'>true</span>").replaceAll("false", "<span class='false'>false</span>");
+    // .replaceAll(/variable[s]? [A-Z]( and [A-Z])?/);
+    //.replaceAll(/not true/g, "<span class='false'>not true</span>").replaceAll(/not false/g, "<span class='true'>not false</span>");
+}
 
 themeToggle.addEventListener('click', toggleTheme);
 infoCardButton.addEventListener('click', () => {
@@ -149,19 +192,36 @@ document.getElementById("answerbt").addEventListener('click', () => {
     let task = taskSet[progress];
     let answer = document.getElementById("answer").value;
 
+    let errormsg = document.getElementById("error-message");
+    errormsg.innerHTML = "";
+
     answer = answer.replace(/\s/g, '');
 
-    task.solutions.forEach(solution => {
-        if (answer === solution) {
+    if (task.tests) {
+        let { result, errors } = evaluateTests(answer, task.tests);
+        if (result === true) {
             _[`p${progress}`]++;
             progress++;
             updateProgress(progress * 100 / taskSet.length);
             displayExplenation(task);
         } else {
             _[`p${progress}`]++;
+            errormsg.innerHTML = "😳" + errors.map(error => error.message).join("<br>");
         }
-        _["crc"] = crc32(_);
-    });
+    } else {
+        task.solutions.forEach(solution => {
+            if (answer === solution) {
+                _[`p${progress}`]++;
+                progress++;
+                updateProgress(progress * 100 / taskSet.length);
+                displayExplenation(task);
+            } else {
+                _[`p${progress}`]++;
+            }
+        });
+    }
+    _["crc"] = crc32(_);
+
 });
 
 function displayExplenation(task) {
@@ -180,7 +240,7 @@ continuebt.addEventListener('click', () => {
         _["u"] = userIDinputt.value;
         _["e"] = Date.now();
         _["crc"] = crc32(_);
-        document.querySelector('#complete > p').innerHTML = `You have completed the task set.<br> SUBMIT : ${btoa(JSON.stringify(_))}`;
+        document.querySelector('#complete > p').innerHTML = `You have completed the task set.<br> SUBMIT : <pre>${key(btoa(JSON.stringify(_)), 20)}</pre>`;
         displayCards(["complete"]);
     }
 });

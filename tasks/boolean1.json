@@ -8,7 +8,12 @@
                 "A",
                 "A==true"
             ],
-            "info": "In boolean logic, a variable alone is considered true if its value is true. You can also use the equality operator to explicitly compare the variable with true."
+            "info": "In boolean logic, a variable alone is considered true if its value is true. You can also use the equality operator to explicitly compare the variable with true.",
+            "tests": [
+                "if(answer.includes('A') == false){ throw new Error('This is not a correct solution, because it does not use the parameter A as part of the solution.'); }",
+                "let A = false; let result = eval(answer); if(result === true){throw new Error('This is not a correct solution, because it returns true when A is false.');};",
+                "let A = true; let result = eval(answer); if(result !== true){throw new Error('This is not a correct solution, because it returns false when A is true.');};"
+            ]
         },
         {
             "description": "Write a statement that is true if variable B is false",
@@ -17,7 +22,12 @@
                 "!B",
                 "B==false"
             ],
-            "info": "In boolean logic, the not operator (!) inverts the value of a variable. You can also use the equality operator to explicitly compare the variable with false."
+            "info": "In boolean logic, the not operator (!) inverts the value of a variable. You can also use the equality operator to explicitly compare the variable with false.",
+            "tests": [
+                "if(answer.includes('B') == false){ throw new Error('This is not a correct solution, because it does not use the parameter B as part of the solution.'); }",
+                "let B = false; let result = eval(answer); if(result === true){throw new Error('This is not a correct solution, because it returns true when B is false.');};",
+                "let B = true; let result = eval(answer); if(result !== true){throw new Error('This is not a correct solution, because it returns false when B is true.');};"
+            ]
         },
         {
             "description": "Write a statement that is true if variable C is not true",
@@ -26,7 +36,12 @@
                 "!C",
                 "C==false"
             ],
-            "info": "In boolean logic, the not operator (!) can be used to check if a variable is not true. This is similar to checking if a variable is false."
+            "info": "In boolean logic, the not operator (!) can be used to check if a variable is not true. This is similar to checking if a variable is false.",
+            "tests": [
+                "if(answer.includes('C') == false){ throw new Error('This is not a correct solution, because it does not use the parameter C as part of the solution.'); }",
+                "let C = false; let result = eval(answer); if(result === true){throw new Error('This is not a correct solution, because it returns true when C is false.');};",
+                "let C = true; let result = eval(answer); if(result !== true){throw new Error('This is not a correct solution, because it returns false when C is true.');};"
+            ]
         },
         {
             "description": "Write a statement that is false if variable D is true",
@@ -35,7 +50,12 @@
                 "!D",
                 "D==false"
             ],
-            "info": "You can make a statement false when a variable is true by using the not operator (!) or by explicitly comparing the variable to false."
+            "info": "You can make a statement false when a variable is true by using the not operator (!) or by explicitly comparing the variable to false.",
+            "tests": [
+                "if(answer.includes('D') == false){ throw new Error('This is not a correct solution, because it does not use the parameter D as part of the solution.'); }",
+                "let D = false; let result = eval(answer); if(result === true){throw new Error('This is not a correct solution, because it returns true when D is false.');};",
+                "let D = true; let result = eval(answer); if(result !== true){throw new Error('This is not a correct solution, because it returns false when D is true.');};"
+            ]
         },
         {
             "description": "Write a statement that is false if variable E is false",
@@ -44,7 +64,12 @@
                 "E",
                 "E==true"
             ],
-            "info": "A statement will be false when a variable is false if you simply use the variable name. You can also make a statement false when a variable is false by explicitly comparing the variable to true."
+            "info": "A statement will be false when a variable is false if you simply use the variable name. You can also make a statement false when a variable is false by explicitly comparing the variable to true.",
+            "tests": [
+                "if(answer.includes('E') == false){ throw new Error('This is not a correct solution, because it does not use the parameter E as part of the solution.'); }",
+                "let E = false; let result = eval(answer); if(result === true){throw new Error('This is not a correct solution, because it returns true when E is false.');};",
+                "let E = true; let result = eval(answer); if(result !== true){throw new Error('This is not a correct solution, because it returns false when E is true.');};"
+            ]
         }
     ]
 }

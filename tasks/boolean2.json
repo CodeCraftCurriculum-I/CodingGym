@@ -11,7 +11,14 @@
                 "A && B",
                 "A == true && B == true"
             ],
-            "info": "The logical AND operator (&&) returns true if both operands are true."
+            "info": "The logical AND operator (&&) returns true if both operands are true.",
+            "tests": [
+                "if(answer.includes('A') == false || answer.includes('B') == false ){{ throw new Error('This is not a correct solution, because it does not use the supplied parameter as part of the solution.'); }}",
+                "let A = false; let B = false; let result = eval(answer); if(result !== false){throw new Error('This is not a correct solution, because it returns true when A = false; B = false.');};",
+                "let A = false; let B = true; let result = eval(answer); if(result !== false){throw new Error('This is not a correct solution, because it returns true when A = false; B = true.');};",
+                "let A = true; let B = false; let result = eval(answer); if(result !== false){throw new Error('This is not a correct solution, because it returns true when A = true; B = false.');};",
+                "let A = true; let B = true; let result = eval(answer); if(result !== true){throw new Error('This is not a correct solution, because it returns false when A = true; B = true.');};"
+            ]
         },
         {
             "description": "Write a statement that is false if either variable C or D is false",
@@ -23,7 +30,14 @@
                 "C && D",
                 "C == true && D == true"
             ],
-            "info": "The logical AND operator (&&) returns false if either operand is false."
+            "info": "The logical AND operator (&&) returns false if either operand is false.",
+            "tests": [
+                "if(answer.includes('C') == false || answer.includes('D') == false ){{ throw new Error('This is not a correct solution, because it does not use the supplied parameter as part of the solution.'); }}",
+                "let C = false; let D = false; let result = eval(answer); if(result !== false){throw new Error('This is not a correct solution, because it returns true when C = false; D = false.');};",
+                "let C = false; let D = true; let result = eval(answer); if(result !== false){throw new Error('This is not a correct solution, because it returns true when C = false; D = true.');};",
+                "let C = true; let D = false; let result = eval(answer); if(result !== false){throw new Error('This is not a correct solution, because it returns true when C = true; D = false.');};",
+                "let C = true; let D = true; let result = eval(answer); if(result !== true){throw new Error('This is not a correct solution, because it returns false when C = true; D = true.');};"
+            ]
         },
         {
             "description": "Write a statement that is true if variable E is true and variable F is false",
@@ -35,7 +49,14 @@
                 "E && !F",
                 "E == true && F == false"
             ],
-            "info": "The logical NOT operator (!) inverts the value of a variable."
+            "info": "The logical NOT operator (!) inverts the value of a variable.",
+            "tests": [
+                "if(answer.includes('E') == false || answer.includes('F') == false ){{ throw new Error('This is not a correct solution, because it does not use the supplied parameter as part of the solution.'); }}",
+                "let E = false; let F = false; let result = eval(answer); if(result !== false){throw new Error('This is not a correct solution, because it returns true when E = false; F = false.');};",
+                "let E = false; let F = true; let result = eval(answer); if(result !== false){throw new Error('This is not a correct solution, because it returns true when E = false; F = true.');};",
+                "let E = true; let F = false; let result = eval(answer); if(result !== false){throw new Error('This is not a correct solution, because it returns true when E = true; F = false.');};",
+                "let E = true; let F = true; let result = eval(answer); if(result !== true){throw new Error('This is not a correct solution, because it returns false when E = true; F = true.');};"
+            ]
         },
         {
             "description": "Write a statement that is false if variable G is false and variable H is true",
@@ -47,7 +68,14 @@
                 "!G && H",
                 "G == false && H == true"
             ],
-            "info": "The logical NOT operator (!) inverts the value of a variable."
+            "info": "The logical NOT operator (!) inverts the value of a variable.",
+            "tests": [
+                "if(answer.includes('G') == false || answer.includes('H') == false ){{ throw new Error('This is not a correct solution, because it does not use the supplied parameter as part of the solution.'); }}",
+                "let G = false; let H = false; let result = eval(answer); if(result !== false){throw new Error('This is not a correct solution, because it returns true when G = false; H = false.');};",
+                "let G = false; let H = true; let result = eval(answer); if(result !== false){throw new Error('This is not a correct solution, because it returns true when G = false; H = true.');};",
+                "let G = true; let H = false; let result = eval(answer); if(result !== false){throw new Error('This is not a correct solution, because it returns true when G = true; H = false.');};",
+                "let G = true; let H = true; let result = eval(answer); if(result !== true){throw new Error('This is not a correct solution, because it returns false when G = true; H = true.');};"
+            ]
         },
         {
             "description": "Write a statement that is true if variable I is false and variable J is false",
@@ -59,7 +87,14 @@
                 "!I && !J",
                 "I == false && J == false"
             ],
-            "info": "The logical NOT operator (!) inverts the value of a variable."
+            "info": "The logical NOT operator (!) inverts the value of a variable.",
+            "tests": [
+                "if(answer.includes('I') == false || answer.includes('J') == false ){{ throw new Error('This is not a correct solution, because it does not use the supplied parameter as part of the solution.'); }}",
+                "let I = false; let J = false; let result = eval(answer); if(result !== false){throw new Error('This is not a correct solution, because it returns true when I = false; J = false.');};",
+                "let I = false; let J = true; let result = eval(answer); if(result !== false){throw new Error('This is not a correct solution, because it returns true when I = false; J = true.');};",
+                "let I = true; let J = false; let result = eval(answer); if(result !== false){throw new Error('This is not a correct solution, because it returns true when I = true; J = false.');};",
+                "let I = true; let J = true; let result = eval(answer); if(result !== true){throw new Error('This is not a correct solution, because it returns false when I = true; J = true.');};"
+            ]
         },
         {
             "description": "Write a statement that is true if variable K is true and variable L is not false",
@@ -71,7 +106,14 @@
                 "K && L",
                 "K == true && L == true"
             ],
-            "info": "The logical AND operator (&&) returns true if both operands are true."
+            "info": "The logical AND operator (&&) returns true if both operands are true.",
+            "tests": [
+                "if(answer.includes('K') == false || answer.includes('L') == false ){{ throw new Error('This is not a correct solution, because it does not use the supplied parameter as part of the solution.'); }}",
+                "let K = false; let L = false; let result = eval(answer); if(result !== false){throw new Error('This is not a correct solution, because it returns true when K = false; L = false.');};",
+                "let K = false; let L = true; let result = eval(answer); if(result !== false){throw new Error('This is not a correct solution, because it returns true when K = false; L = true.');};",
+                "let K = true; let L = false; let result = eval(answer); if(result !== false){throw new Error('This is not a correct solution, because it returns true when K = true; L = false.');};",
+                "let K = true; let L = true; let result = eval(answer); if(result !== true){throw new Error('This is not a correct solution, because it returns false when K = true; L = true.');};"
+            ]
         },
         {
             "description": "Write a statement that is false if variable M is not true and variable N is not false",
@@ -83,7 +125,14 @@
                 "!M && N",
                 "M == false && N == true"
             ],
-            "info": "The logical AND operator (&&) returns false if either operand is false."
+            "info": "The logical AND operator (&&) returns false if either operand is false.",
+            "tests": [
+                "if(answer.includes('M') == false || answer.includes('N') == false ){{ throw new Error('This is not a correct solution, because it does not use the supplied parameter as part of the solution.'); }}",
+                "let M = false; let N = false; let result = eval(answer); if(result !== false){throw new Error('This is not a correct solution, because it returns true when M = false; N = false.');};",
+                "let M = false; let N = true; let result = eval(answer); if(result !== false){throw new Error('This is not a correct solution, because it returns true when M = false; N = true.');};",
+                "let M = true; let N = false; let result = eval(answer); if(result !== false){throw new Error('This is not a correct solution, because it returns true when M = true; N = false.');};",
+                "let M = true; let N = true; let result = eval(answer); if(result !== true){throw new Error('This is not a correct solution, because it returns false when M = true; N = true.');};"
+            ]
         },
         {
             "description": "Write a statement that is true if variable O is not false and variable P is not true",
@@ -95,7 +144,14 @@
                 "O && !P",
                 "O == true && P == false"
             ],
-            "info": "The logical NOT operator (!) inverts the value of a variable."
+            "info": "The logical NOT operator (!) inverts the value of a variable.",
+            "tests": [
+                "if(answer.includes('O') == false || answer.includes('P') == false ){{ throw new Error('This is not a correct solution, because it does not use the supplied parameter as part of the solution.'); }}",
+                "let O = false; let P = false; let result = eval(answer); if(result !== false){throw new Error('This is not a correct solution, because it returns true when O = false; P = false.');};",
+                "let O = false; let P = true; let result = eval(answer); if(result !== false){throw new Error('This is not a correct solution, because it returns true when O = false; P = true.');};",
+                "let O = true; let P = false; let result = eval(answer); if(result !== false){throw new Error('This is not a correct solution, because it returns true when O = true; P = false.');};",
+                "let O = true; let P = true; let result = eval(answer); if(result !== true){throw new Error('This is not a correct solution, because it returns false when O = true; P = true.');};"
+            ]
         },
         {
             "description": "Write a statement that is false if variable Q is not false and variable R is true",
@@ -107,7 +163,14 @@
                 "Q && !R",
                 "Q == true && R == false"
             ],
-            "info": "The logical AND operator (&&) returns false if either operand is false."
+            "info": "The logical AND operator (&&) returns false if either operand is false.",
+            "tests": [
+                "if(answer.includes('Q') == false || answer.includes('R') == false ){{ throw new Error('This is not a correct solution, because it does not use the supplied parameter as part of the solution.'); }}",
+                "let Q = false; let R = false; let result = eval(answer); if(result !== false){throw new Error('This is not a correct solution, because it returns true when Q = false; R = false.');};",
+                "let Q = false; let R = true; let result = eval(answer); if(result !== false){throw new Error('This is not a correct solution, because it returns true when Q = false; R = true.');};",
+                "let Q = true; let R = false; let result = eval(answer); if(result !== false){throw new Error('This is not a correct solution, because it returns true when Q = true; R = false.');};",
+                "let Q = true; let R = true; let result = eval(answer); if(result !== true){throw new Error('This is not a correct solution, because it returns false when Q = true; R = true.');};"
+            ]
         },
         {
             "description": "Write a statement that is true if variable S is not true and variable T is not true",
@@ -119,7 +182,14 @@
                 "!S && !T",
                 "S == false && T == false"
             ],
-            "info": "The logical NOT operator (!) inverts the value of a variable."
+            "info": "The logical NOT operator (!) inverts the value of a variable.",
+            "tests": [
+                "if(answer.includes('S') == false || answer.includes('T') == false ){{ throw new Error('This is not a correct solution, because it does not use the supplied parameter as part of the solution.'); }}",
+                "let S = false; let T = false; let result = eval(answer); if(result !== false){throw new Error('This is not a correct solution, because it returns true when S = false; T = false.');};",
+                "let S = false; let T = true; let result = eval(answer); if(result !== false){throw new Error('This is not a correct solution, because it returns true when S = false; T = true.');};",
+                "let S = true; let T = false; let result = eval(answer); if(result !== false){throw new Error('This is not a correct solution, because it returns true when S = true; T = false.');};",
+                "let S = true; let T = true; let result = eval(answer); if(result !== true){throw new Error('This is not a correct solution, because it returns false when S = true; T = true.');};"
+            ]
         }
     ]
 }
