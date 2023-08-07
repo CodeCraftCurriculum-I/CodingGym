@@ -190,6 +190,283 @@
                 "let S = true; let T = false; let result = eval(answer); if(result !== false){throw new Error('This is not a correct solution, because it returns true when S = true; T = false.');};",
                 "let S = true; let T = true; let result = eval(answer); if(result !== true){throw new Error('This is not a correct solution, because it returns false when S = true; T = true.');};"
             ]
-        }
+        },
+        [
+            {
+                "description": "Write a statement that is true if variable A is true and variable B is false.",
+                "variables": [
+                    "A",
+                    "B"
+                ],
+                "solutions": [
+                    "A && !B",
+                    "A == true && B == false"
+                ],
+                "info": "This task demonstrates the logical AND operation combined with logical NOT.",
+                "tests": [
+                    "if(answer.includes('A') == false || answer.includes('B') == false){ throw new Error('Both variables A and B must be used in the solution.'); }",
+                    "let A = true; let B = false; let result = eval(answer); if(result !== true){throw new Error('The solution returns false when A is true and B is false.');};",
+                    "let A = false; let B = true; let result = eval(answer); if(result === true){throw new Error('The solution returns true when A is false and B is true.');};"
+                ]
+            },
+            {
+                "description": "Write a statement that is true if either variable X is true or variable Y is false.",
+                "variables": [
+                    "X",
+                    "Y"
+                ],
+                "solutions": [
+                    "X || !Y",
+                    "X == true || Y == false"
+                ],
+                "info": "This task teaches the logical OR operation combined with logical NOT.",
+                "tests": [
+                    "if(answer.includes('X') == false || answer.includes('Y') == false){ throw new Error('Both variables X and Y must be used in the solution.'); }",
+                    "let X = false; let Y = true; let result = eval(answer); if(result === true){throw new Error('The solution returns true when X is false and Y is true.');};",
+                    "let X = true; let Y = false; let result = eval(answer); if(result !== true){throw new Error('The solution returns false when X is true and Y is false.');};"
+                ]
+            },
+            {
+                "description": "Write a statement that is true if both variables M and N are false.",
+                "variables": [
+                    "M",
+                    "N"
+                ],
+                "solutions": [
+                    "!M && !N",
+                    "M == false && N == false"
+                ],
+                "info": "This task helps in understanding logical AND operation with both operands being negated.",
+                "tests": [
+                    "if(answer.includes('M') == false || answer.includes('N') == false){ throw new Error('Both variables M and N must be used in the solution.'); }",
+                    "let M = true; let N = false; let result = eval(answer); if(result === true){throw new Error('The solution returns true when M is true and N is false.');};",
+                    "let M = false; let N = false; let result = eval(answer); if(result !== true){throw new Error('The solution returns false when both M and N are false.');};"
+                ]
+            },
+            {
+                "description": "Write a statement that is true if variable P is false and variable Q is true.",
+                "variables": [
+                    "P",
+                    "Q"
+                ],
+                "solutions": [
+                    "!P && Q",
+                    "P == false && Q == true"
+                ],
+                "info": "This task emphasizes the importance of combining logical NOT and AND to create complex conditions.",
+                "tests": [
+                    "if(answer.includes('P') == false || answer.includes('Q') == false){ throw new Error('Both variables P and Q must be used in the solution.'); }",
+                    "let P = false; let Q = false; let result = eval(answer); if(result === true){throw new Error('The solution returns true when P is false and Q is false.');};",
+                    "let P = true; let Q = true; let result = eval(answer); if(result === true){throw new Error('The solution returns true when both P and Q are true.');};"
+                ]
+            },
+            {
+                "description": "Write a statement that is true if either variable K is false or both variables K and L are true.",
+                "variables": [
+                    "K",
+                    "L"
+                ],
+                "solutions": [
+                    "!K || (K && L)",
+                    "K == false || (K == true && L == true)"
+                ],
+                "info": "This task introduces a combination of logical OR, AND, and NOT to create intricate logical conditions.",
+                "tests": [
+                    "if(answer.includes('K') == false || answer.includes('L') == false){ throw new Error('Both variables K and L must be used in the solution.'); }",
+                    "let K = true; let L = false; let result = eval(answer); if(result === true){throw new Error('The solution returns true when K is true and L is false.');};",
+                    "let K = false; let L = true; let result = eval(answer); if(result !== true){throw new Error('The solution returns false when K is false and L is true.');};"
+                ]
+            },
+            [
+                {
+                    "description": "Write a statement that is true if either variable G is true and variable H is false or vice versa.",
+                    "variables": [
+                        "G",
+                        "H"
+                    ],
+                    "solutions": [
+                        "(G && !H) || (!G && H)",
+                        "G != H"
+                    ],
+                    "info": "This task illustrates the XOR (exclusive or) behavior using AND, OR, and NOT.",
+                    "tests": [
+                        "let G = true; let H = true; let result = eval(answer); if(result === true){throw new Error('The solution returns true when both G and H are true.');};",
+                        "let G = true; let H = false; let result = eval(answer); if(result !== true){throw new Error('The solution returns false when G is true and H is false.');};",
+                        "let G = false; let H = false; let result = eval(answer); if(result === true){throw new Error('The solution returns true when both G and H are false.');};"
+                    ]
+                },
+                {
+                    "description": "Write a statement that is true if both variables R and S are true, or both are false.",
+                    "variables": [
+                        "R",
+                        "S"
+                    ],
+                    "solutions": [
+                        "(R && S) || (!R && !S)",
+                        "R == S"
+                    ],
+                    "info": "This task illustrates the equivalence operation using AND, OR, and NOT.",
+                    "tests": [
+                        "let R = true; let S = true; let result = eval(answer); if(result !== true){throw new Error('The solution returns false when both R and S are true.');};",
+                        "let R = true; let S = false; let result = eval(answer); if(result === true){throw new Error('The solution returns true when R is true and S is false.');};",
+                        "let R = false; let S = false; let result = eval(answer); if(result !== true){throw new Error('The solution returns false when both R and S are false.');};"
+                    ]
+                },
+                {
+                    "description": "Write a statement that is true if variable T is true or variable U is true, but not both.",
+                    "variables": [
+                        "T",
+                        "U"
+                    ],
+                    "solutions": [
+                        "(T || U) && !(T && U)",
+                        "T != U"
+                    ],
+                    "info": "This task explores the concept of exclusive OR using AND, OR, and NOT.",
+                    "tests": [
+                        "let T = true; let U = true; let result = eval(answer); if(result === true){throw new Error('The solution returns true when both T and U are true.');};",
+                        "let T = false; let U = true; let result = eval(answer); if(result !== true){throw new Error('The solution returns false when T is false and U is true.');};",
+                        "let T = false; let U = false; let result = eval(answer); if(result === true){throw new Error('The solution returns true when both T and U are false.');};"
+                    ]
+                },
+                {
+                    "description": "Write a statement that is true if variable V is true, or both variables V and W are false.",
+                    "variables": [
+                        "V",
+                        "W"
+                    ],
+                    "solutions": [
+                        "V || (!V && !W)",
+                        "V || (V == false && W == false)"
+                    ],
+                    "info": "This task emphasizes combining logical OR with AND and NOT to create more complex conditions.",
+                    "tests": [
+                        "let V = true; let W = false; let result = eval(answer); if(result !== true){throw new Error('The solution returns false when V is true and W is false.');};",
+                        "let V = true; let W = true; let result = eval(answer); if(result !== true){throw new Error('The solution returns false when both V and W are true.');};",
+                        "let V = false; let W = true; let result = eval(answer); if(result === true){throw new Error('The solution returns true when V is false and W is true.');};"
+                    ]
+                },
+                {
+                    "description": "Write a statement that is true if variable D is false and variable E is true, or both are true.",
+                    "variables": [
+                        "D",
+                        "E"
+                    ],
+                    "solutions": [
+                        "(!D && E) || (D && E)",
+                        "(D == false && E == true) || (D == true && E == true)"
+                    ],
+                    "info": "This task demonstrates the ability to combine logical NOT, AND, and OR operations to express complex logic.",
+                    "tests": [
+                        "let D = true; let E = false; let result = eval(answer); if(result === true){throw new Error('The solution returns true when D is true and E is false.');};",
+                        "let D = false; let E = true; let result = eval(answer); if(result !== true){throw new Error('The solution returns false when D is false and E is true.');};",
+                        "let D = true; let E = true; let result = eval(answer); if(result !== true){throw new Error('The solution returns false when both D and E are true.');};"
+                    ]
+                },
+                {
+                    "description": "Write a statement that is true if variable I is false and variable J is false, or if I is true and J is true.",
+                    "variables": [
+                        "I",
+                        "J"
+                    ],
+                    "solutions": [
+                        "(I && J) || (!I && !J)",
+                        "I == J"
+                    ],
+                    "info": "This task focuses on the equivalence operation between two variables, using AND, OR, and NOT.",
+                    "tests": [
+                        "let I = true; let J = false; let result = eval(answer); if(result === true){throw new Error('The solution returns true when I is true and J is false.');};",
+                        "let I = false; let J = false; let result = eval(answer); if(result !== true){throw new Error('The solution returns false when both I and J are false.');};",
+                        "let I = true; let J = true; let result = eval(answer); if(result !== true){throw new Error('The solution returns false when both I and J are true.');};"
+                    ]
+                },
+                {
+                    "description": "Write a statement that is true if variable M is true and variable N is false.",
+                    "variables": [
+                        "M",
+                        "N"
+                    ],
+                    "solutions": [
+                        "M && !N",
+                        "M == true && N == false"
+                    ],
+                    "info": "This task is a straightforward use of logical AND and NOT.",
+                    "tests": [
+                        "let M = true; let N = true; let result = eval(answer); if(result === true){throw new Error('The solution returns true when both M and N are true.');};",
+                        "let M = false; let N = true; let result = eval(answer); if(result === true){throw new Error('The solution returns true when M is false and N is true.');};",
+                        "let M = true; let N = false; let result = eval(answer); if(result !== true){throw new Error('The solution returns false when M is true and N is false.');};"
+                    ]
+                },
+                {
+                    "description": "Write a statement that is true if variable Q is false or variable F is true.",
+                    "variables": [
+                        "Q",
+                        "F"
+                    ],
+                    "solutions": [
+                        "!Q || F",
+                        "Q == false || F == true"
+                    ],
+                    "info": "This task highlights the use of logical OR in combination with NOT.",
+                    "tests": [
+                        "let Q = true; let F = false; let result = eval(answer); if(result === true){throw new Error('The solution returns true when Q is true and F is false.');};",
+                        "let Q = false; let F = true; let result = eval(answer); if(result !== true){throw new Error('The solution returns false when Q is false and F is true.');};",
+                        "let Q = false; let F = false; let result = eval(answer); if(result !== true){throw new Error('The solution returns false when both Q and F are false.');};"
+                    ]
+                },
+                {
+                    "description": "Write a statement that is true if variable O is true, and either variable P is true or variable Z is false.",
+                    "variables": [
+                        "O",
+                        "P",
+                        "Z"
+                    ],
+                    "solutions": [
+                        "O && (P || !Z)",
+                        "O == true && (P == true || Z == false)"
+                    ],
+                    "info": "This task introduces a nested logical expression using AND, OR, and NOT.",
+                    "tests": [
+                        "let O = true; let P = false; let Z = true; let result = eval(answer); if(result === true){throw new Error('The solution returns true when O is true, P is false, and Z is true.');};",
+                        "let O = false; let P = true; let Z = false; let result = eval(answer); if(result === true){throw new Error('The solution returns true when O is false, P is true, and Z is false.');};",
+                        "let O = true; let P = true; let Z = false; let result = eval(answer); if(result !== true){throw new Error('The solution returns false when O is true, P is true, and Z is false.');};"
+                    ]
+                },
+                {
+                    "description": "Write a statement that is true if either variable X or variable Y is true, but not both.",
+                    "variables": [
+                        "X",
+                        "Y"
+                    ],
+                    "solutions": [
+                        "(X || Y) && !(X && Y)",
+                        "X != Y"
+                    ],
+                    "info": "This task emphasizes the concept of exclusive OR (XOR) using AND, OR, and NOT.",
+                    "tests": [
+                        "let X = true; let Y = true; let result = eval(answer); if(result === true){throw new Error('The solution returns true when both X and Y are true.');};",
+                        "let X = true; let Y = false; let result = eval(answer); if(result !== true){throw new Error('The solution returns false when X is true and Y is false.');};",
+                        "let X = false; let Y = false; let result = eval(answer); if(result === true){throw new Error('The solution returns true when both X and Y are false.');};"
+                    ]
+                },
+                {
+                    "description": "Write a statement that is true if variable K is false, or both variables K and L are true.",
+                    "variables": [
+                        "K",
+                        "L"
+                    ],
+                    "solutions": [
+                        "!K || (K && L)",
+                        "K == false || (K == true && L == true)"
+                    ],
+                    "info": "This task explores complex logic by combining logical OR with AND and NOT.",
+                    "tests": [
+                        "let K = true; let L = false; let result = eval(answer); if(result === true){throw new Error('The solution returns true when K is true and L is false.');};",
+                        "let K = true; let L = true; let result = eval(answer); if(result !== true){throw new Error('The solution returns false when both K and L are true.');};",
+                        "let K = false; let L = true; let result = eval(answer); if(result !== true){throw new Error('The solution returns false when K is false and L is true.');};"
+                    ]
+                }
+            ]
+        ]
     ]
 }

@@ -53,6 +53,8 @@ function setInfoCard(description) {
 }
 
 function createTaskSet(tasks) {
+    let x = params.get('x');
+    if (x) { return tasks; }
     let t = params.get('t');
     let take = t || ((tasks.length >= 10) ? Math.round(tasks.length * 0.5) : tasks.length);
     let taskSet = new Set();
