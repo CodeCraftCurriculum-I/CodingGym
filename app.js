@@ -27,6 +27,7 @@ let _ = {};
 let themeToggle = document.querySelector('#theme-toggle');
 let infoCardButton = document.querySelector('#intro button');
 let userIDinputt = document.querySelector('#userID');
+let params = new URLSearchParams(window.location.search);
 
 function updateProgress(progress) {
     if (progress < 0) progress = 0;
@@ -52,7 +53,8 @@ function setInfoCard(description) {
 }
 
 function createTaskSet(tasks) {
-    let take = tasks.length >= 10 ? Math.round(tasks.length * 0.5) : tasks.length;
+    let t = params.get('t');
+    let take = t || ((tasks.length >= 10) ? Math.round(tasks.length * 0.5) : tasks.length);
     let taskSet = new Set();
     _["tk"] = `${take}|${tasks.length}}`;
     while (taskSet.size < take) {
@@ -74,11 +76,9 @@ function displayCards(cardIds) {
 }
 
 function evaluateTests(userAnswer, tests, errors = []) {
-    console.log(userAnswer);
     return {
         result: tests.every(test => {
             try {
-                console.log(test);
                 let func = new Function('answer', test);
                 func(userAnswer);
                 return true;
@@ -107,7 +107,6 @@ function crc32(object) {
 }
 
 async function loadTask(tasks) {
-    let params = new URLSearchParams(window.location.search);
     let task = params.get('task');
     let url = tasks[task];
     let response = await fetch(url);
@@ -124,7 +123,9 @@ async function loadTask(tasks) {
 function showTask(task) {
     displayCards(["task"]);
 
-    document.getElementById("answer").value = "";
+    let answ = document.getElementById("answer")
+    answ.value = "";
+    answ.focus();
 
     let description = document.querySelector('#task > p');
     description.innerHTML = format(task.description);
@@ -177,8 +178,6 @@ function validateUserID() {
 
 function format(input) {
     return input.replaceAll("true", "<span class='true'>true</span>").replaceAll("false", "<span class='false'>false</span>");
-    // .replaceAll(/variable[s]? [A-Z]( and [A-Z])?/);
-    //.replaceAll(/not true/g, "<span class='false'>not true</span>").replaceAll(/not false/g, "<span class='true'>not false</span>");
 }
 
 themeToggle.addEventListener('click', toggleTheme);
@@ -206,17 +205,19 @@ document.getElementById("answerbt").addEventListener('click', () => {
             displayExplenation(task);
         } else {
             _[`p${progress}`]++;
-            errormsg.innerHTML = "😳" + errors.map(error => error.message).join("<br>");
+            errormsg.innerHTML = "😳 " + format(errors.map(error => error.message).join("<br>"));
         }
     } else {
         task.solutions.forEach(solution => {
-            if (answer === solution) {
+            let s = solution.replace(/\s/g, '');
+            if (answer === s) {
                 _[`p${progress}`]++;
                 progress++;
                 updateProgress(progress * 100 / taskSet.length);
                 displayExplenation(task);
             } else {
                 _[`p${progress}`]++;
+                errormsg.innerHTML = "😳 That is incorect. Try again. Remember that in these tasks you should do things in order given. (because we have more work to do)";
             }
         });
     }
@@ -228,11 +229,21 @@ function displayExplenation(task) {
     displayCards(["explanation"]);
     let description = document.querySelector('#explanation > p');
     let code = document.querySelector('#explanation > code');
-    description.innerHTML = task.info;
+    description.innerHTML = format(task.info);
     code.innerHTML = task.solutions.join("<br>");
+    continuebt.focus();
 }
 
+
+document.getElementById("answer").addEventListener("keypress", function (e) {
+    if (e.key === "Enter") {
+        e.preventDefault();
+        document.getElementById("answerbt").click();
+    }
+});
+
 continuebt.addEventListener('click', () => {
+
     if (progress < taskSet.length) {
         showTask(taskSet[progress]);
     } else {
@@ -240,8 +251,15 @@ continuebt.addEventListener('click', () => {
         _["u"] = userIDinputt.value;
         _["e"] = Date.now();
         _["crc"] = crc32(_);
-        document.querySelector('#complete > p').innerHTML = `You have completed the task set.<br> SUBMIT : <pre>${key(btoa(JSON.stringify(_)), 20)}</pre>`;
+        document.querySelector('#complete > p').innerHTML = `You have completed the task set.<br> SUBMIT : <pre>${key(btoa(JSON.stringify(_, null, 3)), 20)}</pre>`;
         displayCards(["complete"]);
+    }
+});
+
+userIDinputt.addEventListener("keypress", function (e) {
+    if (e.key === "Enter") {
+        e.preventDefault();
+        infoCardButton.click();
     }
 });
 
